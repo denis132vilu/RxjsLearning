@@ -1,0 +1,27 @@
+<main>
+    <h1>
+        {{title|titlecase}}
+        <button class="btn" #btn *ngIf="showButton">
+            Haz clic aquí
+        </button>
+        <button class="btn" (click)="setVisibilityOfComponent()">
+            Mostrar / Ocultar
+        </button>
+    </h1>
+    <hr>
+    <p>
+        Si ocultamos el elemento, ya no nos mostrará en consola nada. Debido a que, cuando usamos ngIf, desaparece el
+        elemento. Lo cual inicia el elemento a su estado inicial.
+    </p>
+    <br>
+    <h2>
+        Operators RxJS
+    </h2>
+    <hr>
+    <p>
+        Aquí mostraremos la data obtenida del datasource<br>
+        <span *ngFor="let item of sourceArray">
+            {{item}}<br>
+        </span>
+    </p>
+</main>
